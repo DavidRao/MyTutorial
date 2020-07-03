@@ -15,30 +15,37 @@
 ## git init
 - 在当前文件夹下初始化git仓库：`git init`
 
+
+
 ## git config
 
 - 查看用户配置：`git config --list`
   - 当前项目配置：`cat .git/config`
   - global配置：`cat ~/.gitconfig`
-
 - 配置用户名：`git config --global user.name 用户名`
-
 - 配置用户邮箱：`git config --global user.email 邮箱`
 
+
+
 ## git status
-查看状态：`git status`
+- 查看状态：`git status`
+
+
 
 ## git add
-工作区添加到暂存区：`git add 文件名`、`git add .`
+- 工作区添加到暂存区：`git add 文件名`、`git add .`
+
+
 
 ## git commit
 - 暂存区提交到版本库：
   - `git commit [文件名]`
   - `git commit -m '版本描述' [文件名]`
-
 - 将工作区中被跟踪过的文件添加到版本库：
   - `git commit -am '版本描述'`
 - 撤销上一次提交，并将暂存区的文件重新提交到版本库：`git commit --amend`
+
+
 
 ## git log
 
@@ -49,7 +56,12 @@
   - 详细日志：`git log`
   - 简短索引值单行显示`git log --oneline`
   - 完整索引值单行显示`git log --pretty=oneline`
+    - 设置范围
+      - `git log HEAD^^..HEAD --oneline`
+      - `git log 版本号..版本号 --oneline`
   - 带步数简短索引值单行显示：`git reflog`
+
+
 
 ## git reset
 
@@ -69,6 +81,8 @@
   - 本地库和暂存区不一致，暂存区不显示
   - 工作区和暂存区一致，暂存区绿色
   - 工作区和暂存区不一致，暂存区红色
+
+
 
 ## git rm
 
@@ -189,6 +203,11 @@
   - `git checkout -- 文件名`
     - 如果暂存区中没有该文件，则把该文件从版本库中拉回到工作区
     - 如果暂存区有该文件，则把该文件从暂存区中拉回到工作区
+
+> 命令行说明中格式 尖括号 中括号的含义
+>
+> https://blog.csdn.net/x356982611/article/details/84852039
+
 
 
 
