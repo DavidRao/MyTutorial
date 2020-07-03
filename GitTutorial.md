@@ -57,9 +57,11 @@
   - 简短索引值单行显示`git log --oneline`
   - 完整索引值单行显示`git log --pretty=oneline`
     - 设置范围
+      - `git log -n --oneline`（n为最近n次提交的日志）
       - `git log HEAD^^..HEAD --oneline`
       - `git log 版本号..版本号 --oneline`
   - 带步数简短索引值单行显示：`git reflog`
+    - `git reflog -n` （n为最近n次提交的日志）
 
 
 
@@ -120,7 +122,8 @@
 ## git checkout
 
 - 切换分支：`git checkout 分支名`
-- 用当前分支的指定文件，覆盖另一分支的同名文件：`git checkout 另一分支名 文件名`
+- 用另一分支的文件覆盖当前分支下的同名文件：git checkout 另一分支名 -- 文件名`
+- 当前分支下的指定文件被版本库HEAD指向的版本的同名文件覆盖：`git checkout -- 文件名`
 
 
 
@@ -128,7 +131,7 @@
 
 - 合并分支
   - 第一步，切换到接受修改的分支上（被合并）
-  - 第二步，执行merge命令：`git merge 分支名`
+  - 第二步，执行merge命令，把指定分支合并到当前分支上：`git merge 分支名`
 - 解决合并冲突
   - 第一步：编辑文件，删除特殊负号，保存退出
   - 第二步：`git add [文件名]`
@@ -208,6 +211,12 @@
 >
 > https://blog.csdn.net/x356982611/article/details/84852039
 
+> 修改日志
+>
+> https://www.cnblogs.com/chucklu/p/4721404.html
 
+> git merge 之后文件被删除
+>
+> https://blog.csdn.net/chent86/article/details/83033585
 
 
