@@ -105,10 +105,7 @@
 ## git checkout
 
 - 切换分支：`git checkout 分支名`
-
-- `git checkout -- 文件名`
-  - 如果暂存区中没有该文件，则把该文件从版本库中拉回到工作区
-  - 如果暂存区有该文件，则把该文件从暂存区中拉回到工作区
+- 用当前分支的指定文件，覆盖另一分支的同名文件：`git checkout 另一分支名 文件名`
 
 
 
@@ -178,3 +175,19 @@
 显示帮助文档：`git help`
 
 凭据管理器删除原GitHub账号：控制面板→凭据管理器
+
+> 在Git中，origin / master与origin master之间有什么区别？
+>
+> https://blog.csdn.net/u014599371/article/details/90055737
+
+> git merge一个指定文件
+>
+> https://www.jianshu.com/p/3b464a848538
+
+- 以下用法有待商榷
+  - `git checkout -- 文件名`
+    - 如果暂存区中没有该文件，则把该文件从版本库中拉回到工作区
+    - 如果暂存区有该文件，则把该文件从暂存区中拉回到工作区
+
+
+
