@@ -169,10 +169,18 @@
   - fetch：从远程库下载分支，并开辟一个命名为`远程库别名/远程库分支名`的分支，不改变工作区文件：`git fetch 远程库别名 远程库分支名`
     - 转到新开辟的分支：`git checkout 远程库别名/远程库分支名`
     - 回到本地原分支：`git checkout 远程库分支名`
-  - merge：把下载下来的远程库合并到工作区：`git merge 远程库别名/远程库分支名` `
+  - merge：把下载下来的远程库合并到工作区：`git merge 远程库别名/远程库分支名` 
+  
+  
+
+## git rebase
+
+- 将目标分支rebase到当前分支 `git rebase 分支名`
+  - 分支名可以是远程分支名，也可以是本地分支名
 
 
 
+# git常见操作
 
 
 ## 解决冲突
@@ -181,6 +189,22 @@
   - 先`pull`下来
   - 在本地解决冲突
   - 再`push`到远程库
+
+
+
+
+## fork同步
+
+```bash
+git remote add upstream fork的源头地址
+git fetch upstream [fork的源头的分支名]
+git branch -r
+git rebase upstream/master
+git merge upstream/master
+```
+
+
+
 
 
 
